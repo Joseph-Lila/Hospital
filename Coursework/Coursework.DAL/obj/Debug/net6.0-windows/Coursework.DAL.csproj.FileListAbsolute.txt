@@ -1,0 +1,5 @@
+D:\RiderProjects\AndreyCW\Coursework\Coursework.DAL\obj\Debug\net6.0-windows\Coursework.DAL.csproj.AssemblyReference.cache
+D:\RiderProjects\AndreyCW\Coursework\Coursework.DAL\obj\Debug\net6.0-windows\Coursework.DAL.GeneratedMSBuildEditorConfig.editorconfig
+D:\RiderProjects\AndreyCW\Coursework\Coursework.DAL\obj\Debug\net6.0-windows\Coursework.DAL.AssemblyInfoInputs.cache
+D:\RiderProjects\AndreyCW\Coursework\Coursework.DAL\obj\Debug\net6.0-windows\Coursework.DAL.AssemblyInfo.cs
+D:\RiderProjects\AndreyCW\Coursework\Coursework.DAL\obj\Debug\net6.0-windows\Coursework.DAL.csproj.CoreCompileInputs.cache
