@@ -53,38 +53,28 @@ public class RoleRepository : IRepository<Role>
 
     public void Create(Role item)
     {
-        string sqlExpression = "INSERT INTO Contract (TenantId, PlaceId, TotalCost, Start, Finish, Debt) VALUES (@tenantId, @placeId, @totalCost, @start, @finish, @debt)";
+        string sqlExpression = "INSERT INTO Role (Title, Duties, Requirements, Description) VALUES (@Title, @Duties, @Requirements, @Description)";
         using (var connection = new SQLiteConnection(_connectionString))
         {
             connection.Open();
  
             SQLiteCommand command = new SQLiteCommand(sqlExpression, connection);
-            SQLiteParameter tenantIdParam = new SQLiteParameter("@tenantId", item.TenantId);
-            SQLiteParameter placeIdParam = new SQLiteParameter("@placeId", item.PlaceId);
-            SQLiteParameter totalCostParam = new SQLiteParameter("@totalCost", item.TotalCost);
-            string start = item.Start.ToString("yyyy-MM-dd HH:mm:ss");
-            SQLiteParameter startParam = new SQLiteParameter("@start", start);
-            string finish = item.Finish.ToString("yyyy-MM-dd HH:mm:ss");
-            SQLiteParameter finishParam = new SQLiteParameter("@finish", finish);
-            SQLiteParameter debtParam = new SQLiteParameter("@debt", item.Debt);
-            command.Parameters.Add(tenantIdParam);
-            command.Parameters.Add(placeIdParam);
-            command.Parameters.Add(totalCostParam);
-            command.Parameters.Add(startParam);
-            command.Parameters.Add(finishParam);
-            command.Parameters.Add(debtParam);
+            SQLiteParameter titleParameter = new SQLiteParameter("@Title", item.Title);
+            SQLiteParameter dutiesParameter = new SQLiteParameter("@Duties", item.Duties);
+            SQLiteParameter requirementSqLiteParameter = new SQLiteParameter("@Requirements", item.Requirements);
+            SQLiteParameter descriptionParameter = new SQLiteParameter("@Description", item.Description);
+            command.Parameters.Add(titleParameter);
+            command.Parameters.Add(dutiesParameter);
+            command.Parameters.Add(requirementSqLiteParameter);
+            command.Parameters.Add(descriptionParameter);
             command.ExecuteNonQuery();
         }
     }
 
     public void Update(Role old, Role @new)
     {
-        string startOld = old.Start.ToString("yyyy-MM-dd HH:mm:ss");
-        string finishOld = old.Finish.ToString("yyyy-MM-dd HH:mm:ss");
-        string startNew = @new.Start.ToString("yyyy-MM-dd HH:mm:ss");
-        string finishNew = @new.Finish.ToString("yyyy-MM-dd HH:mm:ss");
         string sqlExpression = 
-            $"UPDATE Contract SET TenantId={@new.TenantId}, PlaceId={@new.PlaceId}, TotalCost={@new.TotalCost.ToString().Replace(',', '.')}, Start='{startNew}', Finish='{finishNew}', Debt={@new.Debt.ToString().Replace(',', '.')} WHERE TenantId={old.TenantId} and PlaceId={old.PlaceId} and TotalCost={old.TotalCost.ToString().Replace(',', '.')} and Start='{startOld}' and Finish='{finishOld}' and Debt={old.Debt.ToString().Replace(',', '.')}";
+            $"UPDATE Role SET Title='{@new.Title}', Duties='{@new.Duties}', Requirements='{@new.Requirements}', Description='{@new.Description}' WHERE Title='{old.Title}' and Duties='{old.Duties}' and Requirements='{old.Requirements}' and Description='{old.Description}'";
 
         using (SQLiteConnection connection = new SQLiteConnection(_connectionString))
         {
@@ -97,7 +87,7 @@ public class RoleRepository : IRepository<Role>
 
     public void Delete(int id)
     {
-        string sqlExpression = $"DELETE FROM Contract WHERE Id={id}";
+        string sqlExpression = $"DELETE FROM Role WHERE Id={id}";
  
         using (SQLiteConnection connection = new SQLiteConnection(_connectionString))
         {

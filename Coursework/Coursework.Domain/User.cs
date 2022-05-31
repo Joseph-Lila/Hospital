@@ -4,7 +4,7 @@ namespace Coursework.Domain;
 
 public class User : IHaveId
 {
-    public int Id { get; set; }
+    public int Id { get; set; } = 0;
     public int UserInfoId { get; set; }
     public int RoleId { get; set; }
     public string Login { get; set; } = "";

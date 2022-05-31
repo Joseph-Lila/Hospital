@@ -55,39 +55,46 @@ public class UserRepository : IRepository<User>
 
     public void Create(User item)
     {
-        string sqlExpression = "INSERT INTO Contract (TenantId, PlaceId, TotalCost, Start, Finish, Debt) VALUES (@tenantId, @placeId, @totalCost, @start, @finish, @debt)";
+        string sqlExpression = 
+            "INSERT INTO User (UserInfoId, RoleId, Login, Password) VALUES (@UserInfoId, @RoleId, @Login, @Password)";
         using (var connection = new SQLiteConnection(_connectionString))
         {
             connection.Open();
  
             SQLiteCommand command = new SQLiteCommand(sqlExpression, connection);
-            SQLiteParameter tenantIdParam = new SQLiteParameter("@tenantId", item.TenantId);
-            SQLiteParameter placeIdParam = new SQLiteParameter("@placeId", item.PlaceId);
-            SQLiteParameter totalCostParam = new SQLiteParameter("@totalCost", item.TotalCost);
-            string start = item.Start.ToString("yyyy-MM-dd HH:mm:ss");
-            SQLiteParameter startParam = new SQLiteParameter("@start", start);
-            string finish = item.Finish.ToString("yyyy-MM-dd HH:mm:ss");
-            SQLiteParameter finishParam = new SQLiteParameter("@finish", finish);
-            SQLiteParameter debtParam = new SQLiteParameter("@debt", item.Debt);
-            command.Parameters.Add(tenantIdParam);
-            command.Parameters.Add(placeIdParam);
-            command.Parameters.Add(totalCostParam);
-            command.Parameters.Add(startParam);
-            command.Parameters.Add(finishParam);
-            command.Parameters.Add(debtParam);
+            List<SQLiteParameter> parameters = GetItemParameters(item);
+            foreach (var parameter in parameters)
+            {
+                command.Parameters.Add(parameter);
+            }
             command.ExecuteNonQuery();
         }
     }
 
     public void Update(User old, User @new)
     {
-        string startOld = old.Start.ToString("yyyy-MM-dd HH:mm:ss");
-        string finishOld = old.Finish.ToString("yyyy-MM-dd HH:mm:ss");
-        string startNew = @new.Start.ToString("yyyy-MM-dd HH:mm:ss");
-        string finishNew = @new.Finish.ToString("yyyy-MM-dd HH:mm:ss");
         string sqlExpression = 
-            $"UPDATE Contract SET TenantId={@new.TenantId}, PlaceId={@new.PlaceId}, TotalCost={@new.TotalCost.ToString().Replace(',', '.')}, Start='{startNew}', Finish='{finishNew}', Debt={@new.Debt.ToString().Replace(',', '.')} WHERE TenantId={old.TenantId} and PlaceId={old.PlaceId} and TotalCost={old.TotalCost.ToString().Replace(',', '.')} and Start='{startOld}' and Finish='{finishOld}' and Debt={old.Debt.ToString().Replace(',', '.')}";
+            $"UPDATE User SET UserInfoId=@newUserInfoId, RoleId=@newRoleId, Login=@newLogin, Password=@newPassword " +
+            $"WHERE UserInfoId=@oldUserInfoId and RoleId=@oldRoleId and Login=@oldLogin and Password=@oldPassword";
 
+        using (SQLiteConnection connection = new SQLiteConnection(_connectionString))
+        {
+            connection.Open();
+ 
+            SQLiteCommand command = new SQLiteCommand(sqlExpression, connection);
+            List<SQLiteParameter> parameters = GetOldNewParameters(old, @new);
+            foreach (var parameter in parameters)
+            {
+                command.Parameters.Add(parameter);
+            }
+            int number = command.ExecuteNonQuery();
+        }
+    }
+
+    public void Delete(int id)
+    {
+        string sqlExpression = $"DELETE FROM User WHERE Id={id}";
+ 
         using (SQLiteConnection connection = new SQLiteConnection(_connectionString))
         {
             connection.Open();
@@ -96,17 +103,34 @@ public class UserRepository : IRepository<User>
             int number = command.ExecuteNonQuery();
         }
     }
-
-    public void Delete(int id)
+    
+    private List<SQLiteParameter> GetItemParameters(User item)
     {
-        string sqlExpression = $"DELETE FROM Contract WHERE Id={id}";
- 
-        using (SQLiteConnection connection = new SQLiteConnection(_connectionString))
+        List<SQLiteParameter> parameters = new List<SQLiteParameter>
         {
-            connection.Open();
- 
-            SQLiteCommand command = new SQLiteCommand(sqlExpression, connection);
-            int number = command.ExecuteNonQuery();
-        }
+            new SQLiteParameter("@Id", item.Id),
+            new SQLiteParameter("@UserInfoId", item.UserInfoId),
+            new SQLiteParameter("@RoleId", item.RoleId),
+            new SQLiteParameter("@Login", item.Login),
+            new SQLiteParameter("@Password", item.Password)
+        };
+        return parameters;
+    }
+    private List<SQLiteParameter> GetOldNewParameters(User old, User @new)
+    {
+        List<SQLiteParameter> parameters = new List<SQLiteParameter>
+        {
+            new SQLiteParameter("@oldId", old.Id),
+            new SQLiteParameter("@oldUserInfoId", old.UserInfoId),
+            new SQLiteParameter("@oldRoleId", old.RoleId),
+            new SQLiteParameter("@oldLogin", old.Login),
+            new SQLiteParameter("@oldPassword", old.Password),
+            new SQLiteParameter("@newId", @new.Id),
+            new SQLiteParameter("@newUserInfoId", @new.UserInfoId),
+            new SQLiteParameter("@newRoleId", @new.RoleId),
+            new SQLiteParameter("@newLogin", @new.Login),
+            new SQLiteParameter("@newPassword", @new.Password)
+        };
+        return parameters;
     }
 }

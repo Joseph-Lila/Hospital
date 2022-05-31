@@ -1,0 +1,27 @@
+﻿<Page x:Class="Coursework.UI.Pages.Menus.AdminMenu"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:local="clr-namespace:Coursework.UI.Pages.Menus"
+      mc:Ignorable="d"
+      Title="AdminMenu">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <TextBlock Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="25" Margin="10"><Hyperlink>Добавить врача</Hyperlink></TextBlock>
+        <TextBlock Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="25" Margin="10"><Hyperlink>Просмотр врачей</Hyperlink></TextBlock>
+        <TextBlock Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="25" Margin="10"><Hyperlink>Просмотр пациентов</Hyperlink></TextBlock>
+        <TextBlock Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="25" Margin="10"><Hyperlink>Просмотр историй болезней</Hyperlink></TextBlock>
+        <TextBlock Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="25" Margin="10"><Hyperlink>Просмотр / добавление палат</Hyperlink></TextBlock>
+        <TextBlock Grid.Row="5" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="25" Margin="10"><Hyperlink>Просмотр / добавление болезней</Hyperlink></TextBlock>
+        <TextBlock Grid.Row="6" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="25" Margin="10"><Hyperlink></Hyperlink></TextBlock>
+    </Grid>
+</Page>
