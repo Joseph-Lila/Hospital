@@ -12,8 +12,8 @@
             <RowDefinition />
             <RowDefinition />
         </Grid.RowDefinitions>
-        <TextBlock Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="25" Margin="10"><Hyperlink>Принять пациента</Hyperlink></TextBlock>
-        <TextBlock Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="25" Margin="10"><Hyperlink>Выписать пациента</Hyperlink></TextBlock>
-        <TextBlock Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="25" Margin="10"><Hyperlink>Истории болезней</Hyperlink></TextBlock>
+        <TextBlock Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="25" Margin="10"><Hyperlink Click="MakeNewChart">Принять пациента</Hyperlink></TextBlock>
+        <TextBlock Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="25" Margin="10"><Hyperlink Click="CloseChart">Выписать пациента</Hyperlink></TextBlock>
+        <TextBlock Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="25" Margin="10"><Hyperlink Click="ShowCharts">Истории болезней</Hyperlink></TextBlock>
     </Grid>
 </Page>

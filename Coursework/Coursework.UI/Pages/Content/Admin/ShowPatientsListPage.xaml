@@ -1,0 +1,36 @@
+﻿<Page x:Class="Coursework.UI.Pages.Content.Admin.ShowPatientsListPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:local="clr-namespace:Coursework.UI.Pages.Content.Admin"
+      mc:Ignorable="d"
+      Title="ShowPatientsListPage">
+    <Grid>
+        <ListBox HorizontalContentAlignment="Center" x:Name="patientsList">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Margin="4" HorizontalAlignment="Center">
+                        <Image Width="120" Height="80" Margin="2" Source="D:\RiderProjects\AndreyCW\Coursework\Coursework.UI\Images\spider.jpg" />
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="2">
+                            <Label FontSize="25" Content="ФИО:   "></Label>
+                            <Label FontSize="25" Content="{Binding Path=FIO}"></Label>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="2">
+                            <Label FontSize="25" Content="Страна:   "></Label>
+                            <Label FontSize="25" Content="{Binding Path=Country}"></Label>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="2">
+                            <Label FontSize="25" Content="Возраст:   "></Label>
+                            <Label FontSize="25" Content="{Binding Path=Age}"></Label>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="2">
+                            <Label FontSize="25" Content="Паспортные данные:   "></Label>
+                            <Label FontSize="25" Content="{Binding Path=PassportData}"></Label>
+                        </StackPanel>
+                    </StackPanel> 
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+    </Grid>
+</Page>

@@ -7,7 +7,7 @@ namespace Coursework.UI.Pages.Content.Common;
 
 public partial class ShowDoctorsListPage : Page
 {
-    public ObservableCollection<Doctor> Docs { get; set; }
+    public ObservableCollection<BLL.DtoModels.Doctor> Docs { get; set; }
     public ShowDoctorsListPage()
     {
         InitializeComponent();

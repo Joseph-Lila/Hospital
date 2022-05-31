@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data.SQLite;
 using System.Linq;
+using System.Windows;
 using Coursework.DAL.Interfaces;
 using Coursework.Domain;
 
@@ -110,8 +111,7 @@ public class ChartRepository : IRepository<Chart>
         if (@new.Finish != null)
             finishNew = $"'{((DateTime)@new.Finish).ToString("yyyy-MM-dd HH:mm:ss")}'";
         string sqlExpression = 
-            $"UPDATE Chart SET ChamberId={@new.ChamberId}, DoctorId={@new.DoctorId}, PatientId={@new.PatientId}, IllnessId={@new.IllnessId}, Start={startNew}, Finish={finishNew}, Content={@new.Content} WHERE ChamberId={old.ChamberId} and DoctorId={old.DoctorId} and PatientId={old.PatientId} and IllnessId={old.IllnessId} and Start={startOld} and Finish={finishOld} and Content={old.Content}";
-
+            $"UPDATE Chart SET ChamberId={@new.ChamberId}, DoctorId={@new.DoctorId}, PatientId={@new.PatientId}, IllnessId={@new.IllnessId}, Start={startNew}, Finish={finishNew}, Content='{@new.Content}' WHERE ChamberId={old.ChamberId} and DoctorId={old.DoctorId} and PatientId={old.PatientId} and IllnessId={old.IllnessId} and Start={startOld} and Content='{old.Content}'";
         using (SQLiteConnection connection = new SQLiteConnection(_connectionString))
         {
             connection.Open();

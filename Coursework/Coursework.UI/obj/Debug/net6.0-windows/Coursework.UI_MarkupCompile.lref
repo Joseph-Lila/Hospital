@@ -1,9 +1,17 @@
 ﻿
 
 FD:\RiderProjects\AndreyCW\Coursework\Coursework.UI\MainWindow.xaml;;
+FD:\RiderProjects\AndreyCW\Coursework\Coursework.UI\Pages\Content\Admin\AddDoctorPage.xaml;;
+FD:\RiderProjects\AndreyCW\Coursework\Coursework.UI\Pages\Content\Admin\ShowChambersPage.xaml;;
+FD:\RiderProjects\AndreyCW\Coursework\Coursework.UI\Pages\Content\Admin\ShowChartsPage.xaml;;
+FD:\RiderProjects\AndreyCW\Coursework\Coursework.UI\Pages\Content\Admin\ShowIllnessPage.xaml;;
+FD:\RiderProjects\AndreyCW\Coursework\Coursework.UI\Pages\Content\Admin\ShowPatientsListPage.xaml;;
 FD:\RiderProjects\AndreyCW\Coursework\Coursework.UI\Pages\Content\Common\LoginPage.xaml;;
 FD:\RiderProjects\AndreyCW\Coursework\Coursework.UI\Pages\Content\Common\ShowDoctorsListPage.xaml;;
 FD:\RiderProjects\AndreyCW\Coursework\Coursework.UI\Pages\Content\Common\SignUpPage.xaml;;
+FD:\RiderProjects\AndreyCW\Coursework\Coursework.UI\Pages\Content\Doctor\CloseChartPage.xaml;;
+FD:\RiderProjects\AndreyCW\Coursework\Coursework.UI\Pages\Content\Doctor\MakeNewChartPage.xaml;;
+FD:\RiderProjects\AndreyCW\Coursework\Coursework.UI\Pages\Content\Doctor\ShowDoctorsChartsPage.xaml;;
 FD:\RiderProjects\AndreyCW\Coursework\Coursework.UI\Pages\Content\Guest\HelloPage.xaml;;
 FD:\RiderProjects\AndreyCW\Coursework\Coursework.UI\Pages\Content\Patient\ShowPatientChartsPage.xaml;;
 FD:\RiderProjects\AndreyCW\Coursework\Coursework.UI\Pages\Menus\AdminMenu.xaml;;

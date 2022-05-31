@@ -14,14 +14,12 @@
             <RowDefinition />
             <RowDefinition />
             <RowDefinition />
-            <RowDefinition />
         </Grid.RowDefinitions>
-        <TextBlock Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="25" Margin="10"><Hyperlink>Добавить врача</Hyperlink></TextBlock>
-        <TextBlock Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="25" Margin="10"><Hyperlink>Просмотр врачей</Hyperlink></TextBlock>
-        <TextBlock Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="25" Margin="10"><Hyperlink>Просмотр пациентов</Hyperlink></TextBlock>
-        <TextBlock Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="25" Margin="10"><Hyperlink>Просмотр историй болезней</Hyperlink></TextBlock>
-        <TextBlock Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="25" Margin="10"><Hyperlink>Просмотр / добавление палат</Hyperlink></TextBlock>
-        <TextBlock Grid.Row="5" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="25" Margin="10"><Hyperlink>Просмотр / добавление болезней</Hyperlink></TextBlock>
-        <TextBlock Grid.Row="6" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="25" Margin="10"><Hyperlink></Hyperlink></TextBlock>
+        <TextBlock Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="25" Margin="10"><Hyperlink Click="NewDoctor">Добавить врача</Hyperlink></TextBlock>
+        <TextBlock Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="25" Margin="10"><Hyperlink Click="LookAtDocs">Просмотр врачей</Hyperlink></TextBlock>
+        <TextBlock Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="25" Margin="10"><Hyperlink Click="LookAtPatients">Просмотр пациентов</Hyperlink></TextBlock>
+        <TextBlock Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="25" Margin="10"><Hyperlink Click="LookAtCharts">Просмотр историй болезней</Hyperlink></TextBlock>
+        <TextBlock Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="25" Margin="10"><Hyperlink Click="ShowChambersPage">Просмотр / добавление палат</Hyperlink></TextBlock>
+        <TextBlock Grid.Row="5" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="25" Margin="10"><Hyperlink Click="ShowIllnessesPage">Просмотр / добавление болезней</Hyperlink></TextBlock>
     </Grid>
 </Page>

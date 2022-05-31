@@ -1,0 +1,237 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\RiderProjects\\AndreyCW\\Coursework\\Coursework.UI\\Coursework.UI.csproj": {}
+  },
+  "projects": {
+    "D:\\RiderProjects\\AndreyCW\\Coursework\\Coursework.BLL\\Coursework.BLL.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\RiderProjects\\AndreyCW\\Coursework\\Coursework.BLL\\Coursework.BLL.csproj",
+        "projectName": "Coursework.BLL",
+        "projectPath": "D:\\RiderProjects\\AndreyCW\\Coursework\\Coursework.BLL\\Coursework.BLL.csproj",
+        "packagesPath": "C:\\Users\\artur\\.nuget\\packages\\",
+        "outputPath": "D:\\RiderProjects\\AndreyCW\\Coursework\\Coursework.BLL\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\artur\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0-windows"
+        ],
+        "frameworks": {
+          "net6.0-windows7.0": {
+            "targetAlias": "net6.0-windows",
+            "projectReferences": {
+              "D:\\RiderProjects\\AndreyCW\\Coursework\\Coursework.DAL\\Coursework.DAL.csproj": {
+                "projectPath": "D:\\RiderProjects\\AndreyCW\\Coursework\\Coursework.DAL\\Coursework.DAL.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0-windows7.0": {
+          "targetAlias": "net6.0-windows",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            },
+            "Microsoft.WindowsDesktop.App.WPF": {
+              "privateAssets": "none"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Users\\artur\\.dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\RiderProjects\\AndreyCW\\Coursework\\Coursework.DAL\\Coursework.DAL.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\RiderProjects\\AndreyCW\\Coursework\\Coursework.DAL\\Coursework.DAL.csproj",
+        "projectName": "Coursework.DAL",
+        "projectPath": "D:\\RiderProjects\\AndreyCW\\Coursework\\Coursework.DAL\\Coursework.DAL.csproj",
+        "packagesPath": "C:\\Users\\artur\\.nuget\\packages\\",
+        "outputPath": "D:\\RiderProjects\\AndreyCW\\Coursework\\Coursework.DAL\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\artur\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0-windows"
+        ],
+        "frameworks": {
+          "net6.0-windows7.0": {
+            "targetAlias": "net6.0-windows",
+            "projectReferences": {
+              "D:\\RiderProjects\\AndreyCW\\Coursework\\Coursework.Domain\\Coursework.Domain.csproj": {
+                "projectPath": "D:\\RiderProjects\\AndreyCW\\Coursework\\Coursework.Domain\\Coursework.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0-windows7.0": {
+          "targetAlias": "net6.0-windows",
+          "dependencies": {
+            "System.Data.SQLite": {
+              "target": "Package",
+              "version": "[1.0.115.5, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            },
+            "Microsoft.WindowsDesktop.App.WPF": {
+              "privateAssets": "none"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Users\\artur\\.dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\RiderProjects\\AndreyCW\\Coursework\\Coursework.Domain\\Coursework.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\RiderProjects\\AndreyCW\\Coursework\\Coursework.Domain\\Coursework.Domain.csproj",
+        "projectName": "Coursework.Domain",
+        "projectPath": "D:\\RiderProjects\\AndreyCW\\Coursework\\Coursework.Domain\\Coursework.Domain.csproj",
+        "packagesPath": "C:\\Users\\artur\\.nuget\\packages\\",
+        "outputPath": "D:\\RiderProjects\\AndreyCW\\Coursework\\Coursework.Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\artur\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0-windows"
+        ],
+        "frameworks": {
+          "net6.0-windows7.0": {
+            "targetAlias": "net6.0-windows",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0-windows7.0": {
+          "targetAlias": "net6.0-windows",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            },
+            "Microsoft.WindowsDesktop.App.WPF": {
+              "privateAssets": "none"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Users\\artur\\.dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\RiderProjects\\AndreyCW\\Coursework\\Coursework.UI\\Coursework.UI.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\RiderProjects\\AndreyCW\\Coursework\\Coursework.UI\\Coursework.UI.csproj",
+        "projectName": "Coursework.UI",
+        "projectPath": "D:\\RiderProjects\\AndreyCW\\Coursework\\Coursework.UI\\Coursework.UI.csproj",
+        "packagesPath": "C:\\Users\\artur\\.nuget\\packages\\",
+        "outputPath": "D:\\RiderProjects\\AndreyCW\\Coursework\\Coursework.UI\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\artur\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0-windows"
+        ],
+        "frameworks": {
+          "net6.0-windows7.0": {
+            "targetAlias": "net6.0-windows",
+            "projectReferences": {
+              "D:\\RiderProjects\\AndreyCW\\Coursework\\Coursework.BLL\\Coursework.BLL.csproj": {
+                "projectPath": "D:\\RiderProjects\\AndreyCW\\Coursework\\Coursework.BLL\\Coursework.BLL.csproj"
+              },
+              "D:\\RiderProjects\\AndreyCW\\Coursework\\Coursework.Domain\\Coursework.Domain.csproj": {
+                "projectPath": "D:\\RiderProjects\\AndreyCW\\Coursework\\Coursework.Domain\\Coursework.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0-windows7.0": {
+          "targetAlias": "net6.0-windows",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            },
+            "Microsoft.WindowsDesktop.App.WPF": {
+              "privateAssets": "none"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Users\\artur\\.dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

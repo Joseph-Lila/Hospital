@@ -1,0 +1,83 @@
+﻿<Page x:Class="Coursework.UI.Pages.Content.Admin.ShowChambersPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:local="clr-namespace:Coursework.UI.Pages.Content.Admin"
+      mc:Ignorable="d"
+      Title="ShowChambersPage">
+    <Page.Resources>
+        <Style TargetType="Button">
+            <Setter Property="FontSize" Value="25"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center" />
+            <Setter Property="VerticalContentAlignment" Value="Center" />
+            <Setter Property="Margin" Value="3" />
+        </Style>
+        <Style TargetType="Label">
+            <Setter Property="FontSize" Value="25"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center" />
+            <Setter Property="VerticalContentAlignment" Value="Center" />
+            <Setter Property="Margin" Value="3" />
+        </Style>
+        <Style TargetType="TextBox">
+            <Setter Property="FontSize" Value="25"/>
+            <Setter Property="Margin" Value="3" />
+        </Style>
+    </Page.Resources>
+    <ScrollViewer>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <ListBox Grid.Row="0" HorizontalContentAlignment="Center" x:Name="ChamberListBox">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Margin="4" HorizontalAlignment="Center">
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="2">
+                                <Label FontSize="25" Content="Id:   "></Label>
+                                <Label FontSize="25" Content="{Binding Path=Id}"></Label>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="2">
+                                <Label FontSize="25" Content="Номер палаты:   "></Label>
+                                <Label FontSize="25" Content="{Binding Path=ChamberNumber}"></Label>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="2">
+                                <Label FontSize="25" Content="Номер больницы:   "></Label>
+                                <Label FontSize="25" Content="{Binding Path=HospitalNumber}"></Label>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="2">
+                                <Label FontSize="25" Content="Отдел:   "></Label>
+                                <Label FontSize="25" Content="{Binding Path=Department}"></Label>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="2">
+                                <Label FontSize="25" Content="Свободно?:   "></Label>
+                                <Label FontSize="25" Content="{Binding Path=IsFree}"></Label>
+                            </StackPanel>
+                        </StackPanel> 
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+            <Grid MinHeight="800" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+                    <Label Grid.Row="0" Content="Номер палаты" />
+                    <TextBox IsEnabled="True" MinWidth="550" Name="TxtChamberNumber" Grid.Row="1" />
+                    <Label Grid.Row="2" Content="Номер больницы" />
+                    <TextBox IsEnabled="True" MinWidth="550" Name="TxtHospitalNumber" Grid.Row="3" />
+                    <Label Grid.Row="4" Content="Отдел" />
+                    <TextBox IsEnabled="True" MinWidth="550" Name="TxtDepartment" Grid.Row="5" />
+                    <Button Grid.Row="6" Name="AddButton" Click="AddButton_OnClick" Content="Добавить"></Button>
+                </Grid>
+            </Grid>
+        </Grid>
+    </ScrollViewer>
+</Page>

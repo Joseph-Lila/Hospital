@@ -1,0 +1,76 @@
+﻿<Page x:Class="Coursework.UI.Pages.Content.Admin.AddDoctorPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:local="clr-namespace:Coursework.UI.Pages.Content.Admin"
+      mc:Ignorable="d"
+      Title="AddDoctorPage">
+    <Page.Resources>
+        <Style TargetType="Label">
+            <Setter Property="MinWidth" Value="550"/>
+            <Setter Property="FontSize" Value="25" />
+            <Setter Property="HorizontalContentAlignment" Value="Center" />
+            <Setter Property="VerticalContentAlignment" Value="Center" />
+            <Setter Property="Margin" Value="10" />
+        </Style>
+        <Style TargetType="TextBox">
+            <Setter Property="MinWidth" Value="550"/>
+            <Setter Property="FontSize" Value="25" />
+            <Setter Property="HorizontalContentAlignment" Value="Center" />
+            <Setter Property="VerticalContentAlignment" Value="Center" />
+            <Setter Property="Margin" Value="10" />
+        </Style>
+        <Style TargetType="PasswordBox">
+            <Setter Property="MinWidth" Value="550"/>
+            <Setter Property="FontSize" Value="25" />
+            <Setter Property="HorizontalContentAlignment" Value="Center" />
+            <Setter Property="VerticalContentAlignment" Value="Center" />
+            <Setter Property="Margin" Value="10" />
+        </Style>
+        <Style TargetType="Button">
+            <Setter Property="MinWidth" Value="550"/>
+            <Setter Property="FontSize" Value="25"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center" />
+            <Setter Property="VerticalContentAlignment" Value="Center" />
+            <Setter Property="Margin" Value="10" />
+        </Style>
+    </Page.Resources>
+    <Grid>
+        <ScrollViewer>
+            <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" MaxWidth="700">
+                <Label Content="Имя" />
+                <TextBox Name="TxtBoxName"/>
+                <Label Content="Фамилия"/>
+                <TextBox Name="TxtBoxSurname"/>
+                <Label Content="Отчество" />
+                <TextBox Name="TxtBoxLastname"/>
+                <Label Content="Возраст" />
+                <TextBox Name="TxtBoxAge"/>
+                <Label Content="Номер паспорта" />
+                <TextBox Name="TxtBoxPassport"/>
+                <Label Content="Страна" />
+                <TextBox Name="TxtBoxCountry"/>
+                <Label Content="Город" />
+                <TextBox Name="TxtBoxCity"/>
+                <Label Content="Улица" />
+                <TextBox Name="TxtBoxStreet"/>
+                <Label Content="Дом" />
+                <TextBox Name="TxtBoxHomeNumber"/>
+                <Label Content="Квартира" />
+                <TextBox Name="TxtBoxFlatNumber"/>
+                <Label Content="Пол" />
+                <TextBox Name="TxtBoxSex"/>
+                <Label Content="Стаж" />
+                <TextBox Name="TxtBoxExperience"/>
+                <Label Content="Оклад" />
+                <TextBox Name="TxtBoxSalary"/>
+                <Label Content="Логин"/>
+                <TextBox Name="TxtBoxLogin"/>
+                <Label Content="Пароль"/>
+                <PasswordBox Name="TxtBoxPassword" PasswordChar="*" />
+                <Button Click="AddDoctor" Content="Регистрация"/>
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</Page>

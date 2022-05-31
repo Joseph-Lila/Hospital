@@ -1,0 +1,50 @@
+﻿<Page x:Class="Coursework.UI.Pages.Content.Doctor.MakeNewChartPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:local="clr-namespace:Coursework.UI.Pages.Content.Doctor"
+      mc:Ignorable="d"
+      Title="MakeNewChartPage">
+    <Page.Resources>
+        <Style TargetType="Label">
+            <Setter Property="MinWidth" Value="550"/>
+            <Setter Property="FontSize" Value="25"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center" />
+            <Setter Property="VerticalContentAlignment" Value="Center" />
+            <Setter Property="Margin" Value="10" />
+        </Style>
+        <Style TargetType="Button">
+            <Setter Property="MinWidth" Value="550"/>
+            <Setter Property="FontSize" Value="25"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center" />
+            <Setter Property="VerticalContentAlignment" Value="Center" />
+            <Setter Property="Margin" Value="10" />
+        </Style>
+        <Style TargetType="ComboBox">
+            <Setter Property="MinWidth" Value="550"/>
+            <Setter Property="FontSize" Value="25"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center" />
+            <Setter Property="VerticalContentAlignment" Value="Center" />
+            <Setter Property="Margin" Value="10" />
+        </Style>
+    </Page.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Label Grid.Row="0" Content="Номер палаты" />
+        <ComboBox Grid.Row="1" SelectionChanged="ChambersList_OnSelectionChanged" x:Name="chambersList"/>
+        <Label Grid.Row="2" Content="Id пациента" />
+        <ComboBox Grid.Row="3" SelectionChanged="PatientsList_OnSelectionChanged" x:Name="patientsList"/>
+        <Label Grid.Row="4" Content="Болезнь" />
+        <ComboBox Grid.Row="5" SelectionChanged="IllnessesList_OnSelectionChanged" x:Name="illnessesList"/>
+        <Button Grid.Row="6" Name="AddButton" Click="AddButton_OnClick" Content="Создать историю болезни"></Button>
+    </Grid>
+</Page>

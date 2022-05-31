@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using Coursework.DAL.Interfaces;
 using Coursework.DAL.Repositories;
@@ -27,6 +28,16 @@ public class UserManager
         return _repository.GetCollection();
     }
 
+    public ObservableCollection<int> GetPatients()
+    {
+        ObservableCollection<int> patients = new ObservableCollection<int>();
+        foreach (var user in GetCollection())
+        {
+            patients.Add(user.Id);
+        }
+
+        return patients;
+    }
     public User GetById(int id)
     {
         return GetCollection().FirstOrDefault(x => x.Id == id)!;
