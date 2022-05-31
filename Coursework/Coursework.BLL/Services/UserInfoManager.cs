@@ -19,6 +19,12 @@ public class UserInfoManager
     {
         return _repository.GetCollection();
     }
+
+    public UserInfo GetById(int id)
+    {
+        return _repository.GetItem(id)!;
+    }
+    
     public int? Create(UserInfo userInfo)
     {
         _repository.Create(userInfo);

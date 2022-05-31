@@ -36,8 +36,12 @@ public class ChartRepository : IRepository<Chart>
                         int doctorId = reader.GetInt32(2);
                         int patientId = reader.GetInt32(3);
                         int illnessId = reader.GetInt32(4);
-                        DateTime? start = reader.GetDateTime(5);
-                        DateTime? finish = reader.GetDateTime(6);
+                        DateTime? start = null;
+                        if (!reader.IsDBNull(5))
+                            start = reader.GetDateTime(5);
+                        DateTime? finish = null;
+                        if (!reader.IsDBNull(6))
+                            finish = reader.GetDateTime(6);
                         string content = reader.GetString(7);
                         collection.Add(new Chart
                             { Id = id, ChamberId = chamberId, DoctorId = doctorId, PatientId = patientId, 

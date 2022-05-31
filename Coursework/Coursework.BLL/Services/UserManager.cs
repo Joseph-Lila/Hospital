@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System.Collections.Generic;
+using System.Linq;
 using Coursework.DAL.Interfaces;
 using Coursework.DAL.Repositories;
 using Coursework.Domain;
@@ -21,6 +22,10 @@ public class UserManager
         return it.Id;
     }
 
+    public List<User> GetCollection()
+    {
+        return _repository.GetCollection();
+    }
     public User GetByLogin(string login)
     {
         return _repository.GetCollection().FirstOrDefault(x => x.Login == login)!;

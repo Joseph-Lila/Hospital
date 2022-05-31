@@ -12,6 +12,6 @@
             <RowDefinition />
         </Grid.RowDefinitions>
         <TextBlock Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="25" Margin="10"><Hyperlink Click="Hyperlink_OnClick">Страница приветствия</Hyperlink></TextBlock>
-        <TextBlock Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="25" Margin="10"><Hyperlink>Просмотр врачей</Hyperlink></TextBlock>
+        <TextBlock Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="25" Margin="10"><Hyperlink Click="Show_Docs">Просмотр врачей</Hyperlink></TextBlock>
     </Grid>
 </Page>

@@ -15,4 +15,10 @@ public partial class GuestMenu : Page
         MainWindow window = (Application.Current.MainWindow as MainWindow)!;
         window.ContentFrame.Source = window.pages["HelloPage"];
     }
+
+    private void Show_Docs(object sender, RoutedEventArgs e)
+    {
+        MainWindow window = (Application.Current.MainWindow as MainWindow)!;
+        window.ContentFrame.Source = window.pages["ShowDoctorsListPage"];
+    }
 }

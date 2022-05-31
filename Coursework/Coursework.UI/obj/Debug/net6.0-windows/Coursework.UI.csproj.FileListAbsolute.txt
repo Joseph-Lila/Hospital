@@ -54,3 +54,5 @@ D:\RiderProjects\AndreyCW\Coursework\Coursework.UI\obj\Debug\net6.0-windows\Page
 D:\RiderProjects\AndreyCW\Coursework\Coursework.UI\obj\Debug\net6.0-windows\Pages\Menus\AdminMenu.baml
 D:\RiderProjects\AndreyCW\Coursework\Coursework.UI\obj\Debug\net6.0-windows\Pages\Menus\DoctorMenu.baml
 D:\RiderProjects\AndreyCW\Coursework\Coursework.UI\obj\Debug\net6.0-windows\Pages\Menus\PatientMenu.baml
+D:\RiderProjects\AndreyCW\Coursework\Coursework.UI\obj\Debug\net6.0-windows\Pages\Content\Common\ShowDoctorsListPage.g.cs
+D:\RiderProjects\AndreyCW\Coursework\Coursework.UI\obj\Debug\net6.0-windows\Pages\Content\Common\ShowDoctorsListPage.baml

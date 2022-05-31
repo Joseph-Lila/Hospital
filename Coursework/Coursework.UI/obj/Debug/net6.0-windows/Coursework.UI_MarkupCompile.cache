@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
 D:\RiderProjects\AndreyCW\Coursework\Coursework.UI\App.xaml
-8593258277
+9-359718961
 
-10243675686
+11882160407
 2021447965605
-MainWindow.xaml;Pages\Content\Common\LoginPage.xaml;Pages\Content\Common\SignUpPage.xaml;Pages\Content\Guest\HelloPage.xaml;Pages\Menus\AdminMenu.xaml;Pages\Menus\DoctorMenu.xaml;Pages\Menus\GuestMenu.xaml;Pages\Menus\PatientMenu.xaml;
+MainWindow.xaml;Pages\Content\Common\LoginPage.xaml;Pages\Content\Common\ShowDoctorsListPage.xaml;Pages\Content\Common\SignUpPage.xaml;Pages\Content\Guest\HelloPage.xaml;Pages\Menus\AdminMenu.xaml;Pages\Menus\DoctorMenu.xaml;Pages\Menus\GuestMenu.xaml;Pages\Menus\PatientMenu.xaml;
 
 False
 
