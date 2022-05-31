@@ -26,6 +26,11 @@ public class UserManager
     {
         return _repository.GetCollection();
     }
+
+    public User GetById(int id)
+    {
+        return GetCollection().FirstOrDefault(x => x.Id == id)!;
+    }
     public User GetByLogin(string login)
     {
         return _repository.GetCollection().FirstOrDefault(x => x.Login == login)!;

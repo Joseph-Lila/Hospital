@@ -7,6 +7,6 @@
       mc:Ignorable="d"
       Title="PatientMenu">
     <Grid>
-        <TextBlock Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="25" Margin="10"><Hyperlink>Просмотр историй болезней</Hyperlink></TextBlock>
+        <TextBlock Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="25" Margin="10"><Hyperlink Click="Hyperlink_OnClick">Просмотр историй болезней</Hyperlink></TextBlock>
     </Grid>
 </Page>

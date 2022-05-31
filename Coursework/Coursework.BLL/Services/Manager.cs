@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Windows;
 using Coursework.BLL.DtoModels;
 using Coursework.Domain;
 
@@ -52,7 +53,8 @@ public class Manager
         {
             Chamber chamber = ChamberManager.GetById(chart.ChamberId);
             Illness illness = IllnessManager.GetById(chart.IllnessId);
-            UserInfo userInfo = UserInfoManager.GetById(patientId);
+            User user = UserManager.GetById(patientId);
+            UserInfo userInfo = UserInfoManager.GetById(user.UserInfoId);
             answer.Add(new ChartDto
             {
                 ChanberNumber = chamber.ChamberNumber,
@@ -63,7 +65,6 @@ public class Manager
                 DocFIO = userInfo.Surname + ' ' + userInfo.Name + ' ' + userInfo.Lastname
             });
         }
-
         return answer;
     }
 }

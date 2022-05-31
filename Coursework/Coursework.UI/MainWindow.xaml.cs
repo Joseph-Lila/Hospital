@@ -48,6 +48,7 @@ namespace Coursework.UI
             pages["SignUpPage"] = new Uri("Pages/Content/Common/SignUpPage.xaml", UriKind.Relative);
             pages["LoginPage"] = new Uri("Pages/Content/Common/LoginPage.xaml", UriKind.Relative);
             pages["ShowDoctorsListPage"] = new Uri("Pages/Content/Common/ShowDoctorsListPage.xaml", UriKind.Relative);
+            pages["ShowPatientChartsPage"] = new Uri("Pages/Content/Patient/ShowPatientChartsPage.xaml", UriKind.Relative);
         }
 
         private void ButtonBase_GoToSignUp(object sender, RoutedEventArgs e)

@@ -16,7 +16,6 @@
       <Folder Include="Images" />
       <Folder Include="Pages\Content\Admin" />
       <Folder Include="Pages\Content\Doctor" />
-      <Folder Include="Pages\Content\Patient" />
     </ItemGroup>
 
 </Project>
